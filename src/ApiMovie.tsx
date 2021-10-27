@@ -42,6 +42,8 @@ function ApiMovie() {
                       <h1>{movie.title}</h1>
                       <p>{movie.description}</p>
                       <img src={'https://image.tmdb.org/t/p/w500' + movie.backdrop_path} />
+                      <p>Vote Average: {movie.vote_average}</p>
+                      <p></p>
                   </div>
               ))}
               
