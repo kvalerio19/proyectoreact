@@ -13,6 +13,7 @@ function ApiMovie() {
 
     //usa datos hasta que se haya cargado el componente completamente
 
+    //useEffect API_URL_UPCOMING
     useEffect(() =>{
         const fetchData = async () =>{
             const {data} = await axios.get(API_URL_UPCOMING);
@@ -24,6 +25,7 @@ function ApiMovie() {
         fetchData();
     },[]);
 
+    //useEffect API_URL_TOP_RATED_TV_SHOWS
     useEffect(() =>{
         const fetchData = async () =>{
             const {data} = await axios.get(API_URL_TOP_RATED_TV_SHOWS);
@@ -51,8 +53,6 @@ function ApiMovie() {
 
         
     )
-
-
 }
 
 export default ApiMovie
