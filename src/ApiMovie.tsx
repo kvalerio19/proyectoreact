@@ -9,7 +9,7 @@ function ApiMovie() {
     const API_RATE_MOVIES = 'https://api.themoviedb.org/3/movie/{movie_id}/rating?api_key=f6f6ccdecf4c60c8bb20d597133d740e';
 
     const [movies, setMovies] =useState([]);
-    const [rating, setRating] = useState(0);
+    const [rating, setRating] = useState([]);
 
     //usa datos hasta que se haya cargado el componente completamente
 
@@ -48,8 +48,19 @@ function ApiMovie() {
                       <p></p>
                   </div>
               ))}
+
+              {rating.map((rate:any)=>(
+                  <div key={rate.id}>
+                      <h1>{rate.name}</h1>
+                      <img src={'https://image.tmdb.org/t/p/w500' + rate.backdrop_path} />
+                      <p>Vote Average: {rate.vote_average}</p>
+                  </div>
+                  
+              ))}
               
         </div>
+
+        
 
         
     )
