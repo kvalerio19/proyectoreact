@@ -77,8 +77,8 @@ function ApiMovie() {
                       <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + movie.backdrop_path} />
                       <p>Vote: {movie.vote_average}</p>
                       <p></p>
-                    <button className='btn'>Viewed</button>
-                    <button>Wish List</button>
+                    <button className='btn'>View</button>
+                    <button className='btn'>Wish</button>
                       
                   </div>
               ))}
@@ -88,8 +88,8 @@ function ApiMovie() {
                       <h4>{rate.name}</h4>
                       <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + rate.backdrop_path} />
                       <p>Vote: {rate.vote_average}</p>
-                      <button className='btn'>Viewed</button>
-                      <button>Wish List</button>
+                      <button className='btn'>View</button>
+                      <button className='btn'>Wish</button>
                   </div>
                   
               ))}
@@ -99,8 +99,8 @@ function ApiMovie() {
                       <h4>{populars.title}</h4>
                       <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + populars.backdrop_path} />
                       <p>Vote: {populars.vote_average}</p>
-                      <button className='btn'>Viewed</button>
-                      <button>Wish List</button>
+                      <button className='btn'>View</button>
+                      <button className='btn'>Wish</button>
                   </div>
               ))}
               <h3>NOW PLAYING</h3>
@@ -109,8 +109,8 @@ function ApiMovie() {
                       <h4>{plays.title}</h4>
                       <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + plays.backdrop_path} />
                       <p>Vote: {plays.vote_average}</p>
-                      <button className='btn'>Viewed</button>
-                     <button>Wish List</button>
+                      <button className='btn'>View</button>
+                     <button className='btn'>Wish</button>
                   </div>
                   
               ))}
