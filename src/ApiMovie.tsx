@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+
 
 
 function ApiMovie() {
@@ -62,52 +65,63 @@ function ApiMovie() {
         };
         fetchData();
     },[]);
+
     
     return (
-        <div>
+        <div className='container'>
+            <h3>UPCOMING MOVIES</h3>
               {movies.map((movie:any)=>(
-                  <div key={movie.id}>
-                      <h1>{movie.title}</h1>
+                  <div className='cont' key={movie.id}>
+                      <h4>{movie.title}</h4>
                       <p>{movie.description}</p>
-                      <img src={'https://image.tmdb.org/t/p/w500' + movie.backdrop_path} />
-                      <p>Vote Average: {movie.vote_average}</p>
+                      <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + movie.backdrop_path} />
+                      <p>Vote: {movie.vote_average}</p>
                       <p></p>
+                    <button className='btn'>Viewed</button>
+                    <button>Wish List</button>
+                      
                   </div>
               ))}
-
+              <h3>TOP RATED TV SHOWS</h3>
               {rating.map((rate:any)=>(
-                  <div key={rate.id}>
-                      <h1>{rate.name}</h1>
-                      <img src={'https://image.tmdb.org/t/p/w500' + rate.backdrop_path} />
-                      <p>Vote Average: {rate.vote_average}</p>
+                  <div  className='cont1' key={rate.id}>
+                      <h4>{rate.name}</h4>
+                      <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + rate.backdrop_path} />
+                      <p>Vote: {rate.vote_average}</p>
+                      <button className='btn'>Viewed</button>
+                      <button>Wish List</button>
                   </div>
                   
               ))}
-
+              <h3>POPULAR MOVIES</h3>
               {popular.map((populars:any)=>(
-                  <div key={populars.id}>
-                      <h1>{populars.title}</h1>
-                      <img src={'https://image.tmdb.org/t/p/w500' + populars.backdrop_path} />
-                      <p>Vote Average: {populars.vote_average}</p>
-
+                  <div className='cont2' key={populars.id}>
+                      <h4>{populars.title}</h4>
+                      <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + populars.backdrop_path} />
+                      <p>Vote: {populars.vote_average}</p>
+                      <button className='btn'>Viewed</button>
+                      <button>Wish List</button>
                   </div>
               ))}
-
+              <h3>NOW PLAYING</h3>
               {play.map((plays:any)=>(
-                  <div key={plays.id}>
-                      <h1>{plays.title}</h1>
-                      <img src={'https://image.tmdb.org/t/p/w500' + plays.backdrop_path} />
-                      <p>Vote Average: {plays.vote_average}</p>
+                  <div className='cont3' key={plays.id}>
+                      <h4>{plays.title}</h4>
+                      <img className='image-order' src={'https://image.tmdb.org/t/p/w500' + plays.backdrop_path} />
+                      <p>Vote: {plays.vote_average}</p>
+                      <button className='btn'>Viewed</button>
+                     <button>Wish List</button>
                   </div>
                   
               ))}
+
               
         </div>
-
-        
-
         
     )
+
+
 }
+
 
 export default ApiMovie

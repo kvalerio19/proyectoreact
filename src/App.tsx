@@ -6,6 +6,7 @@ import ApiMovie from './ApiMovie';
 function App() {
   return (
     <div>
+      <h1 className='title'>FILMOTECA REACT</h1>
    <ApiMovie/>
     </div>
   );
