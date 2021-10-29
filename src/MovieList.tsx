@@ -23,20 +23,21 @@ import React, { useState } from 'react';
 
 //  export default MovieList;
 
-const MovieList: React.FC = ()=>{
-    const [movie, setMovie] =useState([]);
+// const MovieList: React.FC = ()=>{
+//     const [movie, setMovie] =useState([]);
+//     const FavouriteComponent = movie.favouriteComponent;
+//     return(
+//         <div>
+//             {movie.map((movi:any)=>(
+//                 <div key={movi.id}>
+//                     <img src={movi.title} alt="" />
+//                     <FavouriteComponent/>
+//                 </div>
+//             ))}
 
-    return(
-        <div>
-            {movie.map((movi:any)=>(
-                <div key={movi.id}>
-                    <img src={movi.title} alt="" />
-                </div>
-            ))}
+//         </div>
+//     )
+// }
 
-        </div>
-    )
-}
-
-export default MovieList;
+// export default MovieList;
 

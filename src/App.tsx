@@ -5,7 +5,8 @@ import './App.css';
 //import MovieList from './ApiMovie';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import MovieList from './MovieList';
+//import MovieList from './MovieList';
+import AddFavourite from './AddFavourite';
 
 
 
@@ -121,7 +122,8 @@ function App() {
               ))}
 
               <div>
-                <MovieList/>
+                {/*<MovieList  favouriteComponent={AddFavourite}/>*/}
+                
               </div>
         </div>
 
