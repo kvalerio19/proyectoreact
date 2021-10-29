@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import MovieList from "./MovieList";
 
 
 
@@ -115,13 +116,16 @@ function ApiMovie() {
                   
               ))}
 
+
               
         </div>
+
         
     )
-
-
+         
 }
 
+export default ApiMovie;
 
-export default ApiMovie
+
+
