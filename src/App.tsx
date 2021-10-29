@@ -5,8 +5,10 @@ import './App.css';
 //import MovieList from './ApiMovie';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-//import MovieList from './MovieList';
-import AddFavourite from './AddFavourite';
+//import ViewList from './ViewList';
+import AddView from './AddView';
+import Profile from './Profile';
+//import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 
@@ -21,6 +23,9 @@ function App() {
     const [rating, setRating] = useState([]);
     const [popular, setPopular] = useState([]);
     const [play, setPlaying] = useState([]);
+
+    //Agregar View List
+    const [view, setView] = useState([]);
 
     //usa datos hasta que se haya cargado el componente completamente
 
@@ -72,6 +77,11 @@ function App() {
         fetchData();
     },[]);
 
+   {/* const addViewMovie = (mov:any) =>{
+        const newViewList = [...views, mov];
+        setView(newViewList);
+    }*/}
+
     
     return (
         <div className='container'>
@@ -122,7 +132,7 @@ function App() {
               ))}
 
               <div>
-                {/*<MovieList  favouriteComponent={AddFavourite}/>*/}
+                {/*<ViewList movies={movies} handleViewClick={addViewMovie} viewComponent ={AddView}/>*/}
                 
               </div>
         </div>
