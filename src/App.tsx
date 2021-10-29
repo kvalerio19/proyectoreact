@@ -5,6 +5,8 @@ import './App.css';
 //import MovieList from './ApiMovie';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import MovieList from './MovieList';
+
 
 
 
@@ -118,13 +120,15 @@ function App() {
                   
               ))}
 
-
-              
+              <div>
+                <MovieList/>
+              </div>
         </div>
 
         
     )
-         
+    
+       
 }
 
 export default App;
