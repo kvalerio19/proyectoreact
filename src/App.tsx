@@ -8,7 +8,8 @@ import axios from "axios";
 //import ViewList from './ViewList';
 import AddView from './AddView';
 import Profile from './Profile';
-//import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 
 
 
@@ -77,13 +78,16 @@ function App() {
         fetchData();
     },[]);
 
-   {/* const addViewMovie = (mov:any) =>{
-        const newViewList = [...views, mov];
-        setView(newViewList);
-    }*/}
+    //  const addViewMovie = () =>{
+    //      const temp = {
+    //          text:view, isDone:false
+    //      }
+    //      setView((oldState => [...oldState, temp]));
+    //  };
 
     
     return (
+        
         <div className='container'>
             <h3>UPCOMING MOVIES</h3>
               {movies.map((movie:any)=>(
@@ -133,8 +137,18 @@ function App() {
 
               <div>
                 {/*<ViewList movies={movies} handleViewClick={addViewMovie} viewComponent ={AddView}/>*/}
-                
+                <BrowserRouter>
+              <Switch>
+                  <Route path='/profile' exact>
+                      <Profile/>
+
+                  </Route>
+              </Switch>
+              
+              </BrowserRouter>
               </div>
+
+              
         </div>
 
         
