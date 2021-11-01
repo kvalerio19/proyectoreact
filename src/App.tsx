@@ -10,7 +10,7 @@ const App: React.FC = () => {
 
     return<>
     <div>
-        <h1 className='title'>FILMOTECA REACT</h1>
+        <h1 className='title'>FILMOTECA KENNETH</h1>
     </div>
     <BrowserRouter>
               <Switch>
