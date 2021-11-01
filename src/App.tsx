@@ -9,6 +9,9 @@ import Profile from "./Profile";
 const App: React.FC = () => {
 
     return<>
+    <div>
+        <h1 className='title'>FILMOTECA REACT</h1>
+    </div>
     <BrowserRouter>
               <Switch>
               <Route path='/' exact >
